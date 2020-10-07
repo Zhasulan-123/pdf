@@ -21,10 +21,14 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'template/plugins/fontawesome-free/css/all.min.css',
+        'template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css',
+        'template/plugins/toastr/toastr.min.css',
         'template/dist/css/adminlte.min.css',
     ];
     public $js = [
         'template/plugins/bootstrap/js/bootstrap.bundle.min.js',
+        'template/plugins/sweetalert2/sweetalert2.min.js',
+        'template/plugins/toastr/toastr.min.js',
         'template/dist/js/adminlte.min.js',
         'template/dist/js/demo.js',
     ];

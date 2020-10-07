@@ -2,11 +2,11 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Национального Банка';
+$this->title = 'Pdf file';
 ?>
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title"><?=Yii::t('app', 'Национального Банка Республики Казахстан');?></h3>
+      <h3 class="card-title"><?=Yii::t('app', 'Текст на изображение');?></h3>
     <div class="card-tools"></div>
     </div>
     <!-- /.card-header -->
@@ -14,27 +14,19 @@ $this->title = 'Национального Банка';
         <table class="table table-hover text-nowrap">
             <thead>
             <tr>
-                <th><?=Yii::t('app', '№');?></th>
-                <th><?=Yii::t('app', 'Название');?></th>
-                <th><?=Yii::t('app', 'Курс');?></th>
-                <th><?=Yii::t('app', 'Дата публикауия');?></th>
-                <th><?=Yii::t('app', 'Дата получение');?></th>
+                <th><?=Yii::t('app', 'Язык');?></th>
+                <th><?=Yii::t('app', 'Текст');?></th>
             </tr>
             </thead>
             <tbody>
              <?php if(!empty($model)):?>
-               <?php $i=1; foreach($model as $item):?>
                 <tr>
-                    <td><?=$i++;?></td>
-                    <td><?= Html::encode($item->name); ?></td>
-                    <td><?= Html::encode($item->rate); ?>&nbsp;тг</td>
-                    <td><?= Html::encode($item->date); ?></td>
-                    <td><?= Html::encode($item->created_at); ?></td>
+                    <td><?= Html::encode($model->language); ?></td>
+                    <td><?= Html::encode($model->text); ?>&nbsp;тг</td>
                 </tr>
-               <?php endforeach;?>
                 <?php else : ?>
                     <tr>
-                        <td colspan="5" style="text-align: center; color: red;"><?= Yii::t('app', 'Пусто!!!'); ?></td>
+                        <td colspan="2" style="text-align: center; color: red;"><?= Yii::t('app', 'Пусто!!!'); ?></td>
                     </tr>
                 <?php endif; ?>
             </tbody>

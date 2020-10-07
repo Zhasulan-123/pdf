@@ -40,6 +40,9 @@ AppAsset::register($this);
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?=Url::home();?>" class="nav-link"><?=Yii::t('app', 'Главная');?></a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?=Url::to(['/currency/item']);?>" class="nav-link"><?=Yii::t('app', 'Списки текст');?></a>
+      </li>
     </ul>
 
   </nav>
@@ -77,10 +80,10 @@ AppAsset::register($this);
           
           <li class="nav-header"><?=Yii::t('app', 'Панель управление');?></li>
           <li class="nav-item">
-            <a href="<?=Url::home();?>" class="nav-link">
+            <a href="<?=Url::to(['/currency/item']);?>" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
-                <?=Yii::t('app', 'PDF');?>
+                <?=Yii::t('app', 'Списки текст');?>
               </p>
             </a>
           </li>

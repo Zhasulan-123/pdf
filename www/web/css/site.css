@@ -1,115 +1,142 @@
-html,
-body {
-    height: 100%;
+small {
+  font-size: 0.75em;
+  opacity: 0.5;
 }
-
-.wrap {
-    min-height: 100%;
-    height: auto;
-    margin: 0 auto -60px;
-    padding: 0 0 60px;
+.page {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px;
 }
-
-.wrap > .container {
-    padding: 70px 15px 20px;
+.text-center {
+  text-align: center;
 }
-
-.footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
+input[type="file"] {
+  display: none;
 }
-
-.jumbotron {
-    text-align: center;
-    background-color: transparent;
+.btn,
+select {
+  font: inherit;
+  height: 40px;
+  padding: 0 25px;
+  border-radius: 4px;
+  border: none;
 }
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+select {
+  width: 250px;
 }
-
-.not-set {
-    color: #c55;
-    font-style: italic;
+.btn {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-
-/* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-left: 5px;
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
 }
-
-a.asc:after {
-    content: /*"\e113"*/ "\e151";
+.btn-secondary:hover {
+  background-color: #d5d5d5;
 }
-
-a.desc:after {
-    content: /*"\e114"*/ "\e152";
+.btn-primary {
+  background-color: #009688;
+  color: #fff;
 }
-
-.sort-numerical a.asc:after {
-    content: "\e153";
+.btn-primary:hover {
+  background-color: #00695c;
 }
-
-.sort-numerical a.desc:after {
-    content: "\e154";
+.btn-primary[disabled],
+.btn-primary[disabled]:hover {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
 }
-
-.sort-ordinal a.asc:after {
-    content: "\e155";
+.result {
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  display: flex;
 }
-
-.sort-ordinal a.desc:after {
-    content: "\e156";
+.result > div {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
-
-.grid-view th {
-    white-space: nowrap;
+#preview {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.hint-block {
+#log,
+#preview {
+  margin-bottom: 20px;
+}
+#log {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  border-radius: 4px;
+  padding: 15px;
+  flex-grow: 1;
+  background: #fff;
+}
+#log,
+pre {
+  width: 100%;
+}
+pre {
+  white-space: pre-line;
+  font-size: 16px;
+}
+.state {
+  width: 100%;
+  flex-grow: 1;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-size: 14px;
+}
+.state__status {
+  margin-bottom: 10px;
+}
+.state__status:after {
+  content: "...";
+}
+.state__progress {
+  background-color: #009688;
+  border-radius: 4px;
+  height: 15px;
+  border: 1px solid #eee;
+}
+.state__progress::-webkit-progress-bar {
+  background-color: #fff;
+}
+.state__progress::-webkit-progress-value {
+  background-color: #009688;
+}
+.state__progress::-moz-progress-bar {
+  background-color: #009688;
+}
+@media screen and (max-width: 860px) {
+  html {
+    font-size: 14px;
+  }
+  .btn,
+  select {
+    padding: 0 15px;
+  }
+  .result {
     display: block;
-    margin-top: 5px;
-    color: #999;
-}
-
-.error-summary {
-    color: #a94442;
-    background: #fdf7f7;
-    border-left: 3px solid #eed3d7;
-    padding: 10px 20px;
-    margin: 0 0 15px 0;
-}
-
-/* align the logout "link" (button in form) of the navbar */
-.nav li > form > button.logout {
-    padding: 15px;
-    border: none;
-}
-
-@media(max-width:767px) {
-    .nav li > form > button.logout {
-        display:block;
-        text-align: left;
-        width: 100%;
-        padding: 10px 15px;
-    }
-}
-
-.nav > li > form > button.logout:focus,
-.nav > li > form > button.logout:hover {
-    text-decoration: none;
-}
-
-.nav > li > form > button.logout:focus {
-    outline: none;
+    padding: 0;
+  }
+  .result > div {
+    width: 100%;
+  }
 }
